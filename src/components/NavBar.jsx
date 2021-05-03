@@ -36,18 +36,13 @@ const NavBar = () => {
                             <Dropdown.Menu>
                                 {data.map(item => {
 
-                                    return <Dropdown.Item> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
+                                    return <Dropdown.Item key={item.id}> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
                                 })}
-                                {/* <Dropdown.Item href="#/action-1">Javascript</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">CSS</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">HTML</Dropdown.Item> */}
+
                             </Dropdown.Menu>
                         </Dropdown>
 
-                        {/* <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                            <Button variant="info">Search</Button>
-                        </Form> */}
+
                         <Link to="#" className="items ml-3">Inicio de sesión</Link>
                     </Navbar.Collapse>
 

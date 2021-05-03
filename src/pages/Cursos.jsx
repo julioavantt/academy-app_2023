@@ -39,17 +39,7 @@ const Cursos = () => {
                             return <CursoItem key={curso.id} curso={curso} />
                         })}
 
-                        {/* <div className="col">
-                            <div className="card">
-                                <img src={html} className="card-img-top" alt="html" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Curso CSS flex box y Grid</h5>
-                                    <img className="avatar" src="http://1.gravatar.com/avatar/2bd6474c77fd501924adfa0aae631f57" alt="gravatar" />
-                                    <span className="card-text ml-2">Pablo Marino</span>
 
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

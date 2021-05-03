@@ -35,7 +35,7 @@ const ProgramDetail = ({ curso }) => {
                     <div className="row">
                         <div className="col-6">
                             <ul className="list-group">
-                                {programa.data.programa.map(item => {
+                                {programa.data[0].programa.map(item => {
                                     return <li key={item} className="list-group-item">{item}</li>
                                 })}
 
