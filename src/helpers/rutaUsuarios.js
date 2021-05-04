@@ -10,3 +10,9 @@ export const getUsuario = async (mail) => {
 
     return data
 }
+
+export const postUsuario = async (data) => {
+
+    const resp = await axios.post(`http://localhost:3004/usuarios`, data)
+    console.log(resp)
+}

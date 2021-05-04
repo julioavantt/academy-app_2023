@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 
 import '../css/home.css'
@@ -15,7 +16,7 @@ const Home = () => {
                     <div className="col-6">
                         <h1 className="font-weight-bold">La plataforma<br />
                         de aprendizaje<br /> para desarrolladores</h1>
-                        <button className="btn btn-outline-info mt-3">Crea tu cuenta</button>
+                        <Link to="/registro" className="btn btn-outline-info mt-3">Crea tu cuenta</Link>
                         <p className="text-grey">Únete a los mas de 500.000 estudiantes</p>
                     </div>
                     <div className="col-6">

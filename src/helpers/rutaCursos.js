@@ -23,5 +23,10 @@ export const getCurso = async (id) => {
         return []
     }
 
+}
 
+export const postCurso = async (data) => {
+    const resp = await axios.post(`http://localhost:3004/cursos`, data)
+
+    console.log(resp)
 }

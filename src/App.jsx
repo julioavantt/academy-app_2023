@@ -12,6 +12,8 @@ import Cursos from './pages/Cursos';
 import Error404 from './pages/Error404';
 import Home from './pages/Home'
 import Login from './pages/Login';
+import Registro from './pages/Registro';
+
 const App = () => {
     return (
         <Router>
@@ -20,6 +22,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/registro" component={Registro} />
                 <Route exact path="/cursos" component={Cursos} />
                 <Route exact path="/curso/:id" component={Curso} />
                 <Route component={Error404} />
