@@ -1,11 +1,14 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
 
 import '../css/home.css'
 import home2 from '../images/home2.png'
 
 const Home = () => {
     return (
-        <div>
+
+        <>
+            <NavBar />
 
             <div className="container home-container">
                 <div className="row">
@@ -27,7 +30,7 @@ const Home = () => {
                 </div>
 
             </div>
-        </div>
+        </>
     )
 }
 

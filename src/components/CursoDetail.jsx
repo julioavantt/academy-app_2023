@@ -5,6 +5,11 @@ const CursoDetail = ({ curso }) => {
 
     const arreglo = curso.data
     console.log('arreglo', arreglo)
+
+
+
+
+
     return (
         <>
             {arreglo.length !== 0 ?

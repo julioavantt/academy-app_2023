@@ -9,10 +9,12 @@ const NavBar = () => {
 
 
     useEffect(() => {
+
         getCursos().then(cursos => {
             setData(cursos)
+            setUsuario(JSON.parse(localStorage.getItem('usuario')))
         })
-        setUsuario(JSON.parse(localStorage.getItem('usuario')) || [])
+
     }, [])
 
 
@@ -28,25 +30,31 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="  mr-auto">
                             <Link to="/" className="items mr-3">Home</Link>
-                            <Link to="/cursos" className="items mr-3">Cursos</Link>
+                            {usuario.length > 0 &&
+                                <Link to="/cursos" className="items mr-3">Cursos</Link>
+
+                            }
 
                         </Nav>
-                        <Dropdown>
-                            <Dropdown.Toggle variant="info" id="dropdown-basic">
-                                Buscar cursos
+
+                        {usuario.length > 0 &&
+                            <Dropdown>
+                                <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                    Buscar cursos
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                {data.map(item => {
+                                <Dropdown.Menu>
+                                    {data.map(item => {
 
-                                    return <Dropdown.Item key={item.id}> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
-                                })}
+                                        return <Dropdown.Item key={item.id}> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
+                                    })}
 
-                            </Dropdown.Menu>
-                        </Dropdown>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        }
 
                         {usuario.length > 0 ?
-                            <button className="items ml-3 btn btn-outline-secondary">Cerrar Sesión</button>
+                            <Link to="/login" className="items ml-3 btn btn-outline-secondary">Cerrar Sesión</Link>
                             :
 
                             <Link to="/login" className="items ml-3">Inicio de sesión</Link>
