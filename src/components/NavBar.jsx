@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { getCursos } from '../helpers/rutaCursos'
 import '../css/navbar.css'
 const NavBar = () => {
-
+    const [usuario, setUsuario] = useState([])
     const [data, setData] = useState([])
 
 
@@ -12,7 +12,10 @@ const NavBar = () => {
         getCursos().then(cursos => {
             setData(cursos)
         })
+        setUsuario(JSON.parse(localStorage.getItem('usuario')) || [])
     }, [])
+
+
 
 
     return (
@@ -42,8 +45,12 @@ const NavBar = () => {
                             </Dropdown.Menu>
                         </Dropdown>
 
+                        {usuario.length > 0 ?
+                            <button className="items ml-3 btn btn-outline-secondary">Cerrar Sesión</button>
+                            :
 
-                        <Link to="#" className="items ml-3">Inicio de sesión</Link>
+                            <Link to="/login" className="items ml-3">Inicio de sesión</Link>
+                        }
                     </Navbar.Collapse>
 
                 </div>
