@@ -31,7 +31,7 @@ const Curso = () => {
 
     return (
 
-        <>
+        <div className="mb-4">
             <NavBar />
             {/* {curso.loading && 'Cragando...'} */}
 
@@ -57,7 +57,7 @@ const Curso = () => {
 
             {/* <ProgramDetail programa={programa} /> */}
 
-        </>
+        </div>
 
     )
 }

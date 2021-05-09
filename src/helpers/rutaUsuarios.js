@@ -1,18 +1,43 @@
 import axios from 'axios'
+// import qs from 'qs';
 
-export const getUsuario = async (mail) => {
-
+export const getUsuario = async (mail, password) => {
+    // console.log(mail)
     const resp = await axios(`http://localhost:3004/usuarios?usuario=${mail}`)
 
     const { data } = resp
-    console.log(resp)
+    // console.log(data)
+
+    if (data.length > 0) {
+
+        let validar = data.find(user => {
+            return user.password === password
+        })
+
+        if (validar) {
+
+            return data
+        } else {
+            return []
+        }
+    }
 
 
-    return data
 }
 
-export const postUsuario = async (data) => {
+export const postUsuario = async (datos) => {
+    const resp = await axios.post(`http://localhost:3004/usuarios`, datos)
 
-    const resp = await axios.post(`http://localhost:3004/usuarios`, data)
-    console.log(resp)
+    // console.log(resp)
+    const { data } = resp
+    return data
+
+    // const url = `http://localhost:3005/usuarios`
+    // const options = {
+    //     method: 'POST',
+    //     headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    //     data: qs.stringify(datos),
+    //     url,
+    // };
+    // await axios(options);
 }

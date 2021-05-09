@@ -15,7 +15,7 @@ const Login = (props) => {
     }, [])
 
     useEffect(() => {
-        getUsuario(user.correo).then(datos => {
+        getUsuario(user.correo, user.password).then(datos => {
             setUserData(datos)
             localStorage.setItem('usuario', JSON.stringify(datos))
 
@@ -25,7 +25,7 @@ const Login = (props) => {
 
     useEffect(() => {
 
-        if (userData.length > 0) {
+        if (userData?.length > 0) {
             props.history.push('/')
         }
 

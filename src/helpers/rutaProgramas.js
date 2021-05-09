@@ -5,7 +5,7 @@ export const getPrograma = async (id) => {
 
         const resp = await axios(`http://localhost:3004/programas?id_curso=${id}`)
         const { data } = resp
-        console.log(data)
+        // console.log(data)
 
         return data
     } catch (error) {

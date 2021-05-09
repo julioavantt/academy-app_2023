@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar'
 import home1 from '../images/home1.png'
 
 import '../css/registro.css'
+// import RegistroForm from '../components/RegistroForm'
+import RegistroFormApi from '../components/RegistroFormApi'
 const Registro = () => {
 
 
@@ -20,7 +22,9 @@ const Registro = () => {
                             <img src={home1} className="card-img-top" alt="portada" />
                             <div className="card-body">
                                 <h3 className="card-title text-center mb-3">Crea tu Cuenta gratis</h3>
-                                <form>
+                                {/* <RegistroForm /> */}
+                                <RegistroFormApi />
+                                {/* <form>
                                     <div className="form-group">
                                         <label className="text-muted" >Correo electrónico</label>
                                         <input type="email" className="form-control" />
@@ -36,7 +40,7 @@ const Registro = () => {
                                     </div>
 
                                     <button type="submit" className="btn btn-info btn-block">Registrarse</button>
-                                </form>
+                                </form> */}
                             </div>
                         </div>
                     </div>

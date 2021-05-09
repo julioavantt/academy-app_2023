@@ -3,34 +3,31 @@ import { Link } from 'react-router-dom'
 
 const CursoDetail = ({ curso }) => {
 
-    const arreglo = curso.data
-    console.log('arreglo', arreglo)
-
-
-
+    const { data } = curso
+    // console.log('data', data)
 
 
     return (
         <>
-            {arreglo.length !== 0 ?
+            {data.length !== 0 ?
                 <div className="container mt-5">
 
                     <div className="row">
                         <div className="col">
                             <div className="my-4">
-                                <h3>{curso.data.title}</h3>
+                                <h3>{data.title}</h3>
 
                             </div>
                             <div className="mb-2">
-                                <img className="avatar" src={curso.data.img_mentor} alt={curso.data.mentor} /> <span>{curso.data.mentor}</span>
+                                <img className="avatar" src={data.img_mentor} alt={data.mentor} /> <span>{data.mentor}</span>
 
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-6">
-                            <iframe width="560" height="315" src={curso.data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-                            <p>{curso.data.detalle}</p>
+                            <iframe width="560" height="315" src={data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                            <p>{data.detalle}</p>
                         </div>
                         <div className="col-6">
                             <div className="card ml-3 w-100">

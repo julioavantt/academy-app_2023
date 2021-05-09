@@ -38,19 +38,22 @@ const NavBar = () => {
                         </Nav>
 
                         {usuario.length > 0 &&
-                            <Dropdown>
-                                <Dropdown.Toggle variant="info" id="dropdown-basic">
-                                    Buscar cursos
+                            <>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                        Buscar cursos
                             </Dropdown.Toggle>
 
-                                <Dropdown.Menu>
-                                    {data.map(item => {
+                                    <Dropdown.Menu>
+                                        {data.map(item => {
 
-                                        return <Dropdown.Item key={item.id}> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
-                                    })}
+                                            return <Dropdown.Item key={item.id}> <Link to={`/curso/${item.id}`}>{item.title}</Link></Dropdown.Item>
+                                        })}
 
-                                </Dropdown.Menu>
-                            </Dropdown>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                                <Link to="/admin">Administrar</Link>
+                            </>
                         }
 
                         {usuario.length > 0 ?
