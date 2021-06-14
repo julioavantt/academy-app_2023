@@ -15,15 +15,6 @@
   ],
   "cursos": [
     {
-      "id": 1,
-      "title": "Curso CSS flex box y Grid",
-      "imagen": "https://www.solucionex.com/sites/default/files/posts/imagen/css_blog.png",
-      "detalle": "CSS son las siglas de “Cascading Style Sheets” (hojas de estilo en cascada). CSS es un lenguaje para la composición y estructuración de páginas web (HTML o XML).",
-      "video": "https://www.youtube.com/embed/24gNhTcy6pw",
-      "mentor": "Pablo Marino",
-      "img_mentor": "http://1.gravatar.com/avatar/2bd6474c77fd501924adfa0aae631f57"
-    },
-    {
       "id": 2,
       "title": "Curso Fundamentos Javascript",
       "imagen": "https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/funciones-en-javascript-t1.png",
@@ -40,6 +31,15 @@
       "video": "https://www.youtube.com/embed/vz4z0RLcAyk",
       "mentor": "Pablo Marino",
       "img_mentor": "http://1.gravatar.com/avatar/2bd6474c77fd501924adfa0aae631f57"
+    },
+    {
+      "title": "MongoDB advance",
+      "imagen": "https://www.nilovelez.com/wp-content/uploads/2016/03/0001494_search-engine-powered-by-mongodb.jpeg",
+      "detalle": "Aprende a utilizar una base de datos no relacional y conviértete en un profesional del backend",
+      "video": "https://www.youtube.com/embed/lWMemPN9t6Q",
+      "mentor": "Fabrizio Tonin",
+      "img_mentor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS59YZ5ZS-7LAPTknb4CT9LzT6vJjkpZpXqHQ&usqp=CAU",
+      "id": 4
     }
   ],
   "programas": [
